@@ -1,0 +1,191 @@
+/* The root declares base / default values and allows you to declare variables
+to be used in your code below. */
+:root{
+    font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+/* The body's default colors, and setting the margin & padding to 0 */
+body{
+    color: #D3D6DB;
+    background-color: #3A4750;
+    margin: 0;
+    padding: 0;
+}
+/* Setting the main section to have a relative margin to 5rem to make
+sure the content is not going to be touching our nav bar */
+main{
+    margin-left: 5rem; /* 5 * 16 = 80px margin*/
+    padding: 1rem;
+}
+
+/* Changing the scroll bar to match the website. */
+body::-webkit-scrollbar {
+    width: 0.5rem;
+}
+body::-webkit-scrollbar-track{
+    background-color: #303841;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #BE3144;
+}
+
+/* Styling the nav bar class */
+.navbar {
+    width: 5rem; /* The width is the same as the margin on the main element
+    so it fills up the same amount of space.*/
+    height: 100vh; /*Using vh here to that the nav bar will always be 
+    100% the height of the screen*/
+    position: fixed; /*Anchors the nav bar no matter how far you scroll*/
+    background-color: #303841;
+    transition: width 300ms ease;
+}
+
+.nav-list{ /* class of the entire list*/
+    list-style: none; /* Removes to bullet points from the list*/
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* The nav bar ul is now a flex box item with
+    a orientation of column*/
+    align-items: center;
+    height: 100%; /*Height of the nav bar*/
+}
+.nav-items{ /*class in each item individually*/
+    width: 100%; /*size of the svg icons*/
+}
+.nav-link{
+    display: flex; /*makes this class a flexbox now. Default axis for flex box 
+    is a row.*/
+    align-items: center; /*Centers the icon in the navigation bar vertically*/
+    height: 5rem;
+    color:#D3D6DB;
+    text-decoration: none;
+}
+.link-text{
+    display: none;
+    margin-left: 1rem;
+}
+.nav-link svg{
+   min-width: 2rem;
+   margin: 0 1.5rem; 
+}
+#contact-nav{
+ margin-top: auto;
+}
+
+
+.navbar:hover {
+    width: 16rem; /*The width the nav bar changes to when hovered over.*/   
+}
+
+.navbar:hover .link-text {
+    display: block; /* Shows the text in the a tag when we hover over.*/
+}
+
+
+.fa {
+    color:#a7172a;
+}
+
+
+
+
+ /* Chose to add a media query based off of smart phone 
+ verticle size*/
+
+@media only screen and (max-width: 320px){
+
+}
+
+img{
+    width: 50vh;
+    margin-left: 100px;
+    /* border: black;
+    border: solid;*/
+    border-radius: 10px; 
+    box-shadow: 5px 5px 5px black;
+}
+.intro{
+/* background-color:; */
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1rem;
+border: solid black 5px;
+border-radius: 10px;
+margin-bottom: 150px;
+background-color: black;
+}
+#intro-txt{
+    /* background-color: green; */
+    font-size: 1.5rem;
+}
+
+.intro-div{
+    display: flex;
+    flex-direction: column;
+}
+
+h3{
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.allIntroText{
+    /* background-color: purple;  */
+     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    margin: 0px 100px;
+}
+
+#intro-greeting{
+    font-size: 2.2rem;
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+
+.quote{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+.quote-div{
+    background-color: #a7172a;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+/*About me*/
+.About-Me-Pics{
+    width: 500px;
+}
+#me_in_robotics{
+    height: 355px;
+} 
+
+.pics_in_a_row{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    /* background-color: red; */
+    margin-right: 100px;
+}
+.about-me-info{
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 3rem;
+}
+
+.About-Me-Title{
+    background-color: black;
+    padding: 50px;
+    border-radius: 10px;
+    margin-top: 0px;
+}
+
+
