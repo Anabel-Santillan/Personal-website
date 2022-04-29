@@ -226,6 +226,8 @@ h3{
 }
 .robotics-img{
     align-items: center;
+    height: 400px;
+    width: 450px;
 }
 #robotics-skills{
     text-align: center;
