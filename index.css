@@ -72,58 +72,27 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-.navbar:hover {
-    width: 16rem; /*The width the nav bar changes to when hovered over.*/   
+/* .navbar:hover {
+    width: 16rem; /*The width the nav bar changes to when hovered over.
 }
+ */
 
-.navbar:hover .link-text {
+ .navbar:hover .link-text {
     display: block; /* Shows the text in the a tag when we hover over.*/
-}
+} 
 
 .nav-link:hover{
     color:#a7172a;
     filter: opacity(10);
 }
 
-
-@media only screen and (max-width: 600px){
-    .navbar {
-     bottom: 0;
-     width: 100vw;
-     /* height: 5rem; */
-     max-height: 5rem;
-     transition: max-height 300ms ease;
-    }
-    
-    .fa-ul {
-    flex-direction: row;
-    }
-      
-    .nav-link {
-    justify-content: center;
-    }
-      
-    main {
-    margin: 0;  
-    }
-}
+.selfie{
+    height: 500px;
+    width: 700px;
+} 
 
 
-/* @media only screen and (min-width: 600px){
-        .navbar {
-          top: 0;
-          width: 5rem;
-          height: 100vh;
-        }
-      
-        .navbar:hover {
-          width: 16rem;
-        }
-      
-        .navbar:hover .link-text {
-          display: inline;
-        }
-} */
+
 .intro{
 display: flex;
 justify-content: space-between;
@@ -137,10 +106,7 @@ background-color: black;
 #intro-txt{
     font-size: 1.5rem;
 }
-.selfie{
-    height: 500px;
-    width: 700px;
-}
+
 
 .intro-div{
     display: flex;
@@ -336,4 +302,66 @@ margin-bottom: 100px;
 /*Contact page*/
 .coming-soon-txt{
     text-align: center;
+}
+
+
+/*Media Querie*/
+@media screen and (max-width: 600px){
+    .home-page{
+        font-size: .05rem;
+    }
+    .selfie{
+        width: 10px;
+    }
+    .intro{
+        flex-direction: column;
+    }
+    .quote-div{
+        margin-bottom: 100px;
+    }
+    .navbar {
+     bottom: 0;
+     width: 100vw;
+     height: 5rem;
+     /* max-height: 5rem;
+     transition: max-height 300ms ease; */
+    }
+    .nav-list{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .navbar:hover .link-text{
+        display: none;
+    }
+    .navbar:hover{
+        width: 100vw;
+    }
+    
+    .nav-link {
+    justify-content: center;
+    }
+      
+    main {
+    margin: 0;  
+    }
+    .selfie{
+        height: 400px;
+        width: 500px;
+    }
+    #intro-txt{
+        text-align: center;
+    }
+    #intro-greeting{
+        text-align: center;
+    }
+    /*About me*/
+    #me_in_robotics{
+        margin-left: 50px;
+    }
+    #our-robot{
+        margin-left: 80px;
+    }
+    .present{
+        margin-bottom: 100px;
+    }
 }
