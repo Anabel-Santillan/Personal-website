@@ -90,11 +90,12 @@ body::-webkit-scrollbar-thumb {
     .navbar {
      bottom: 0;
      width: 100vw;
-    height: 5rem;
+     /* height: 5rem; */
+     max-height: 5rem;
+     transition: max-height 300ms ease;
     }
-      
-      
-    .nav-list {
+    
+    .fa-ul {
     flex-direction: row;
     }
       
@@ -124,18 +125,21 @@ body::-webkit-scrollbar-thumb {
         }
 } */
 .intro{
-/* background-color:; */
 display: flex;
 justify-content: space-between;
 align-items: center;
 padding: 1rem;
 border: solid black 5px;
 border-radius: 10px;
-margin-bottom: 150px;
+margin-bottom: 100px;
 background-color: black;
 }
 #intro-txt{
     font-size: 1.5rem;
+}
+.selfie{
+    height: 500px;
+    width: 700px;
 }
 
 .intro-div{
@@ -188,8 +192,11 @@ h3{
     justify-content: center;
     align-items: center;
     align-content: center;
-    /* background-color: red; */
     margin-right: 100px;
+}
+#our-robot{
+    height: 400px;
+    width: 400px;
 }
 .about-me-info{
     text-align: center;
