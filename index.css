@@ -31,46 +31,44 @@ body::-webkit-scrollbar-thumb {
 
 /* Styling the nav bar class */
 .navbar {
-    width: 5rem; /* The width is the same as the margin on the main element
-    so it fills up the same amount of space.*/
-    height: 100vh; /*Using vh here to that the nav bar will always be 
-    100% the height of the screen*/
-    position: fixed; /*Anchors the nav bar no matter how far you scroll*/
+    width: 5rem; 
+    height: 100vh; 
+    position: fixed; 
     background-color: #303841;
     transition: width 300ms ease;
 }
 
-.nav-list{ /* class of the entire list*/
-    list-style: none; /* Removes to bullet points from the list*/
+.nav-list{ /* class of the entire list
+    /* list-style: none; Removes to bullet points from the list */
     padding: 0;
-    margin: 0;
     display: flex;
     flex-direction: column; /* The nav bar ul is now a flex box item with
     a orientation of column*/
-    align-items: center;
-    height: 100%; /*Height of the nav bar*/
+    height: 100%; /*Height of the nav bar */
 }
+
+
 .nav-items{ /*class in each item individually*/
-    width: 100%; /*size of the svg icons*/
+    width: 0rem; /*size of the svg icons*/
+    margin-left: 0.9rem;
 }
 .nav-link{
     display: flex; /*makes this class a flexbox now. Default axis for flex box 
     is a row.*/
     align-items: center; /*Centers the icon in the navigation bar vertically*/
     height: 5rem;
-    color:#D3D6DB;
+    color:black;
     text-decoration: none;
+    transition: 200ms;
+    filter: opacity(0.7);
 }
 .link-text{
     display: none;
     margin-left: 1rem;
 }
-.nav-link svg{
-   min-width: 2rem;
-   margin: 0 1.5rem; 
-}
-#contact-nav{
- margin-top: auto;
+
+.nav-list #contact-nav {
+    margin-top: auto;
 }
 
 
@@ -82,28 +80,48 @@ body::-webkit-scrollbar-thumb {
     display: block; /* Shows the text in the a tag when we hover over.*/
 }
 
-
-.fa {
+.nav-link:hover{
     color:#a7172a;
+    filter: opacity(10);
 }
 
 
-
-
- /* Chose to add a media query based off of smart phone 
- verticle size*/
-
-@media only screen and (max-width: 320px){
-
+@media only screen and (max-width: 600px){
+    .navbar {
+     bottom: 0;
+     width: 100vw;
+    height: 5rem;
+    }
+      
+      
+    .nav-list {
+    flex-direction: row;
+    }
+      
+    .nav-link {
+    justify-content: center;
+    }
+      
+    main {
+    margin: 0;  
+    }
 }
 
-img{
-    width: 50vh;
-    margin-left: 100px;
-    /* border: black;
-    border: solid;*/
-    border-radius: 10px; 
-    box-shadow: 5px 5px 5px black;
+
+@media only screen and (min-width: 600px){
+        .navbar {
+          top: 0;
+          width: 5rem;
+          height: 100vh;
+        }
+      
+        .navbar:hover {
+          width: 16rem;
+        }
+      
+        .navbar:hover .link-text {
+          display: inline;
+        }
 }
 .intro{
 /* background-color:; */
@@ -117,7 +135,6 @@ margin-bottom: 150px;
 background-color: black;
 }
 #intro-txt{
-    /* background-color: green; */
     font-size: 1.5rem;
 }
 
@@ -133,7 +150,6 @@ h3{
 }
 
 .allIntroText{
-    /* background-color: purple;  */
      display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -188,4 +204,121 @@ h3{
     margin-top: 0px;
 }
 
+/*Experience page*/
 
+.Experience-header{
+    background-color: black;
+    padding:5px;
+    border-radius: 10px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+
+.Experience-robotics{
+    display: flex;
+    flex-direction: column;
+
+}
+#robotics-experience{
+    padding: 30px;
+    margin: 20px;
+    text-align: center;
+}
+.robotics-img{
+    align-items: center;
+}
+#robotics-skills{
+    text-align: center;
+}
+.robotics-s-ul{
+    text-align: center;
+    list-style-type: none;
+    margin:0px;
+    padding:0px;
+}
+.accomplishments-robotics{
+    text-align: center;
+}
+.robotics-a-ul{
+    text-align: center;
+    list-style-type: none;
+    margin:0px 0px 50px 0px;
+    padding:0px;
+
+}
+.C2MG-column{
+    display: flex;
+    /* background-color: green; */
+    flex-direction: column;
+    flex-direction: center;
+}
+
+.all-experience{
+    display: flex;
+    justify-content: space-around;
+}
+
+#carpentry-img{
+    margin-left: auto;
+    margin-right: auto;
+}
+.robotics-img{
+    margin-left: auto;
+    margin-right: auto;
+}
+#C2MG-Experience{
+    padding: 30px;
+    margin: 20px;
+    text-align: center;
+}
+.carpentry-skills-ul{
+    text-align: center;
+    list-style-type: none;
+    margin:0px 0px 50px 0px;
+    padding:0px;
+}
+.carpentry-skills-header{
+    text-align: center;
+}
+
+/*Portfolio Styling*/
+.Experience-header{
+    background-color: black;
+    padding:5px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.project-1{
+display: flex;
+justify-content: center;
+margin-bottom: 100px;
+}
+.project-1-header{
+    margin-right: 400px;
+}
+.project-1-img{
+    margin-right: 200px;
+}
+
+.project-2{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+.project-2-header{
+    margin-right: 400px;
+}
+.project-2-img{
+    margin-right: 200px;
+    margin-top: 50px;
+}
+.project-2-desc{
+    margin-top: 50px;
+}
+
+.coming-soon-txt{
+    text-align: center;
+}
